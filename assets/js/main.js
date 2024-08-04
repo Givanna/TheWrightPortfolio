@@ -303,5 +303,25 @@
 		// Navigation Panel Toggle.
 			$('<a href="#navPanel" class="navPanelToggle"></a>')
 				.appendTo($header);
+
+	
+		// Navigation Panel.
+			$(
+				'<div id="navPanel">' +
+					'<nav>' +
+						$('#nav').navList() +
+					'</nav>' +
+					'<a href="#navPanel" class="close"></a>' +
+				'</div>'
+			)
+				.appendTo($body)
+				.panel({
+					delay: 500,
+					hideOnClick: true,
+					hideOnSwipe: true,
+					resetScroll: true,
+					resetForms: true,
+					side: 'right'
+				});
 					
 })(jQuery);
